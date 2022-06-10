@@ -2,16 +2,19 @@
 
 namespace App\Http\Controllers;
 
-class HomeController extends Controller
+use App\Models\Act;
+
+class ActController extends Controller
 {
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Act $act)
     {
         $this->middleware('auth');
+        $this->repositorio = $act;
     }
 
     /**
@@ -20,7 +23,8 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {
-        return view('home');
+    {        
+        $acts = $this->repositorio->orderBy('TX_ORGAO')->get();
+        return view('act.index', compact('acts'));
     }
 }
