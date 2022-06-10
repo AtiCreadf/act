@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, #3d8be4, #0057a9);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div.login{
+    max-width: 400px;
+    min-width: 300px;
+    height: 400px;
+    background-color: #fff;
+
+    border-radius: 2px;
+}
+

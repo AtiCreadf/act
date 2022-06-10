@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'Elegance';
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    src: url("http://eclecticgeek.com/dompdf/fonts/Elegance.ttf") format("truetype");
+}
+
+@page {
+    margin: 2cm 1.5cm 1cm 3cm;
+}
+
+*{
+    font-size: 0.95rem;
+}
+
+table{
+    border: 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead th{
+    text-align: center;
+}
+
+tbody td {
+    text-align: justify; 
+}
+
+
+
+table#etiqueta{
+    border: 1px solid #000;
+}
+
+#watermark {
+    position: fixed;
+    bottom:   0px;
+    left:     0px;
+    /** The width and height may change 
+        according to the dimensions of your letterhead
+    **/
+    width:    21.8cm;
+    height:   28cm;
+
+    /** Your watermark should be behind every content**/
+    z-index:  -1000;
+}
+
+.table-pdf{
+    width: 100%;
+    border: 1px solid #000;
+}
+
+#rodape{
+    position: fixed; 
+
+    height: 2cm;
+    bottom: 0cm;
+    left: 0px; 
+    right: 0px; 
+    color: #212121;
+
+    /* page-break-before: always; */
+}
+
+#contato{
+    font-size: 0.7rem;
+    line-height: 13px;
+}
+
+#cabecalho{
+    height: 2cm;
+    color: #212121;
+}
