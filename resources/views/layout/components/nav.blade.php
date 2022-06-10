@@ -1,39 +1,22 @@
-<?php $id_crea = true; ?>  
-@if (Auth::user()->name != "Guilherme Marçal Calisto")
-  <?php $id_crea = false; ?>  
-@endif
-@if (!$id_crea)
+
   <style>
     li.nav-item > a.nav-link, #username{
       color: #eeeeee;
     }
   </style>
-@endif
 
-@if ($id_crea)
-  <aside class="main-sidebar elevation-4 sidebar-dark-primary" >
-@else
-  <aside class="main-sidebar elevation-4 sidebar-dark-light" style="background-color: #3675bd;">
-@endif
-
+<aside class="main-sidebar elevation-4 sidebar-dark-light" style="background-color: #3675bd;">
     {{-- <a href="/" class="brand-link"> --}}
-    @if ($id_crea)
+    
       <a href="{{ route('home') }}" class="brand-link">
-    @else
-      <a href="{{ route('home') }}" class="brand-link" style="border-bottom: 1px solid #eeeeee;">
-    @endif
-
-      <img src="{{ asset('img/logo-crea.png') }}" alt="LOGO DO CREA-DF" width="100%">
-      {{-- <span class="brand-text font-weight-bold">GED - CREADF</span> --}}
+    
+      <img src="{{ asset('img/logo-crea.png') }}" alt="LOGO DO CREA-DF" width="100%">      
     </a>
 
     <div class="sidebar">
-      @if ($id_crea)
+      
         <div class="user-panel mt-3 pb-3 mb-3 d-flex" >
-      @else
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex" style="border-bottom: 1px solid #eeeeee;">
-      @endif
-  
+      
         <div class="info"> 
           <a href="#" class="d-block" id="username">
             @if (!!session('dadosCA'))
@@ -74,7 +57,23 @@
               </p>
             </a>
           </li>
-         
+          <li class="nav-item">
+            <a href="{{ route('home') }}" class="nav-link">
+              <i class="fas fa-building"></i>
+              <p>
+                ACTs
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{ route('home') }}" class="nav-link">
+              <i class="fas fa-barcode"></i>
+              <p>
+                Gerar Boleto
+              </p>
+            </a>
+          </li>
           
           
         </ul>

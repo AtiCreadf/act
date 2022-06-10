@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('titulo', 'ACT')
+@section('titulo', 'Início')
 
 @section('conteudo')
     @component('layout.components.ui.cabecalho')
