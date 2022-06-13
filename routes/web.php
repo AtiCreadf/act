@@ -22,7 +22,10 @@ Route::middleware('auth')->group(function () {
     Route::get("/", [HomeController::class, 'index'])->name("home");
 
     Route::get('act/index', [ActController::class, 'index'])->name("act.index");
-   
+    Route::get('act/create', [ActController::class, 'create'])->name("act.create");
+    Route::any('act/store', [ActController::class, 'store'])->name("act.store");
+    Route::any('act/edit/{id}', [ActController::class, 'edit'])->name("act.edit");
+    Route::put('act/update/{udpate}', [ActController::class, 'update'])->name("act.update");
 
 });
 

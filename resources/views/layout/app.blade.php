@@ -150,7 +150,7 @@
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('dist/js/demo.js') }}"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>
+    {{-- <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script> --}}
     <!-- Bootstrap4 Duallistbox -->
     <script src="{{ asset('plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js')}}"></script>
     {{-- <script>
@@ -198,9 +198,7 @@
       
         })
     </script> --}}
-    <script src="{{ asset('plugins/select2/js/select2.full.min.js') }}"></script>
-    <script src="{{ asset('js/notificacoes.js') }}"></script>
-    <script src="{{ asset('js/sigilo.js') }}"></script>
+    <script src="{{ asset('plugins/select2/js/select2.full.min.js') }}"></script>    
     
     <script>
         // $('.select2').select2()
@@ -212,11 +210,11 @@
             tokenSeparators: [","],
         })
        
-        console.log($('.select2'))
+        /* console.log($('.select2'))
         @isset(Auth::user()->id)
             notificacoes({{ Auth::user()->id }}, '{{ env("APP_URL") }}');
         @endisset
-
+ */
         
     </script>
 

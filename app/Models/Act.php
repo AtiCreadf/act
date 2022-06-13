@@ -2,13 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Act extends Model
 {
-    use HasFactory;
-
+    public $timestamps = false;
     protected $table = 'ACORDO_COOP_ORGAO_ART';
     protected $primaryKey = 'ID_ACORDO_COOP_ORGAO_ART';
 
